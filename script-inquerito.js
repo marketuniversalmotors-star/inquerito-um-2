@@ -1,9 +1,9 @@
 const form = document.getElementById('surveyForm');
-const urlGoogleScript = 'https://script.google.com/macros/s/AKfycbwDTn6WLDk7vOIVTTQ8NK2XCzofFWL_WdmT1lL92sdkpDrEf_E2vhNKFdnfgtkW-vTv/exec';
+const urlGoogleScript = 'https://script.google.com/macros/s/AKfycbz-KotxTxPs_lZOYBPU27kATinLz4YI8omrKQwWlxN2vPGqiRBjF1aDU0AJQ_V3VyiT/exec';
 
-// Apanha o score (4 ou 5) que veio da página anterior pelo URL
 const urlParams = new URLSearchParams(window.location.search);
 const scoreDado = urlParams.get('score');
+const tokenDado = urlParams.get('token');
 
 if (form) {
     form.addEventListener('submit', e => {
@@ -14,10 +14,13 @@ if (form) {
         
         const formData = new FormData(form);
         
-        // Injeta o score capturado na submissão para o Excel
         if (scoreDado) {
             formData.append('score', scoreDado);
         }
+        if (tokenDado) {
+            formData.append('token', tokenDado);
+        }
+        formData.append('tipo', 'porta'); // Garante que atualiza na aba "Cliente a Porta"
         
         fetch(urlGoogleScript, { 
             method: 'POST', 
