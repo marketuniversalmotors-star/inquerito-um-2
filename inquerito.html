@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquérito de Satisfação - Universal Motors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="survey-card">
+        <div class="header-inside-card">
+            <img src="fotos/logo.jpg" alt="Universal Motors Logo" class="logo">
+        </div>
+        
+        <hr class="card-divider">
+
+        <p class="intro-text">
+            No sentido de melhorarmos a nossa performance, é fundamental conhecer o grau de satisfação dos nossos clientes.<br>
+            Diga-nos, por favor, quais foram os principais motivos da sua avaliação?
+        </p>
+
+        <form id="surveyForm">
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="motivo" value="Produto"> Produto</label>
+                <label><input type="checkbox" name="motivo" value="Tempo de Resposta"> Tempo de Resposta</label>
+                <label><input type="checkbox" name="motivo" value="Serviço Após Venda"> Serviço Após Venda</label>
+                <label><input type="checkbox" name="motivo" value="Documentação Técnica"> Documentação Técnica</label>
+                <label><input type="checkbox" name="motivo" value="Atendimento ao Cliente"> Atendimento ao Cliente</label>
+                <label><input type="checkbox" name="motivo" value="Transporte / Embalagem"> Transporte / Embalagem</label>
+            </div>
+
+            <div class="input-group">
+                <label for="nome_empresa">Nome da Empresa / Cliente</label>
+                <input type="text" id="nome_empresa" name="nome_empresa" placeholder="Insira o seu nome ou o nome da empresa...">
+            </div>
+
+            <div class="textarea-group">
+                <label for="melhorias">Existe algum aspeto que gostaria de ver melhorado na forma como lhe prestamos os nossos serviços?<br>Por favor, indique-o neste espaço.</label>
+                <textarea id="melhorias" name="melhorias" rows="4" placeholder="A sua opinião conta..."></textarea>
+            </div>
+
+            <p class="confidentiality-text">
+                As suas respostas são estritamente confidenciais e serão utilizadas apenas para fins de análise interna. Os dados recolhidos não serão divulgados nem partilhados com terceiros.
+            </p>
+
+            <p class="gratitude-text">Gratos pela colaboração!</p>
+
+            <button type="submit" class="submit-btn">Enviar Avaliação</button>
+        </form>
+    </div>
+
+    <!-- Ligação ao ficheiro JavaScript isolado -->
+    <script src="script-inquerito.js"></script>
+
+</body>
+</html>

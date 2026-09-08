@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f7f6; 
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.survey-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 950px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #004b87; 
+}
+
+.rating-card-layout {
+    max-width: 450px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0; 
+    text-align: center;
+}
+
+.header-inside-card {
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #2c3e50;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.rating-btn {
+    flex: 1;
+    aspect-ratio: 1; 
+    background-color: #ffffff;
+    color: #6c7a89;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: inherit;
+    border: 2px solid #dde1e7;
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+
+.rating-btn.n1:hover { border-color: #e74c3c; color: #e74c3c; background: #fdf2f1; }
+.rating-btn.n2:hover { border-color: #f39c12; color: #f39c12; background: #fef8f0; }
+.rating-btn.n3:hover { border-color: #f1c40f; color: #d4ac0d; background: #fefcf0; }
+.rating-btn.n4:hover { border-color: #2ecc71; color: #2ecc71; background: #f0fbf4; }
+.rating-btn.n5:hover { border-color: #004b87; color: #004b87; background: #eef4f9; } 
+
+.card-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e1e5eb;
+    margin-bottom: 30px;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e1e5eb;
+    color: #2c3e50;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+    background-color: #f8fafd;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e5eb;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #004b87;
+}
+
+.input-group,
+.textarea-group {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.input-group label,
+.textarea-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.input-group input[type="text"],
+.textarea-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    background-color: #fcfcfc;
+}
+
+.textarea-group textarea {
+    resize: vertical;
+}
+
+.input-group input[type="text"]:focus,
+.textarea-group textarea:focus {
+    outline: none;
+    border-color: #004b87;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 75, 135, 0.1);
+}
+
+.confidentiality-text {
+    font-size: 11px;
+    text-align: center;
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.gratitude-text {
+    text-align: center;
+    font-weight: 700;
+    color: #004b87;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.submit-btn {
+    background-color: #004b87;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 75, 135, 0.2);
+}
+
+.submit-btn:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 75, 135, 0.3);
+}
+
+.thank-you-card {
+    text-align: center;
+    max-width: 500px;
+    padding: 40px 40px 60px 40px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.envelope-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border: 3px solid #22c55e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-mark {
+    color: #22c55e;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.thank-you-card h2 {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.thank-you-card p {
+    color: #718096;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}

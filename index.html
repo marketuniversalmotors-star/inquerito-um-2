@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação - Universal Motors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="survey-card rating-card-layout">
+        <div class="header">
+            <img src="fotos/logo.jpg" alt="Universal Motors Logo" class="logo">
+        </div>
+
+        <div id="survey-section">
+            <h1>Como classifica o nosso serviço?</h1>
+            <div class="rating-container">
+                <button class="rating-btn n1" onclick="submitRating(1)">1</button>
+                <button class="rating-btn n2" onclick="submitRating(2)">2</button>
+                <button class="rating-btn n3" onclick="submitRating(3)">3</button>
+                <button class="rating-btn n4" onclick="submitRating(4)">4</button>
+                <button class="rating-btn n5" onclick="submitRating(5)">5</button>
+            </div>
+        </div>
+        
+        <div id="loading-msg" style="display:none; margin-top: 20px; color: #004b87; font-weight:600;">
+            A registar a sua avaliação...
+        </div>
+    </div>
+
+    <!-- Ligação ao ficheiro JavaScript isolado -->
+    <script src="script-index.js"></script>
+
+</body>
+</html>
